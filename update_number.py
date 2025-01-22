@@ -26,7 +26,6 @@ def generate_random_commit_message():
         model="openai-community/gpt2",
     )
     prompt = """
-        **Come Back to**
         Generate a Git commit message following the Conventional Commits standard. The message should include a type, an optional scope, and a subject.Please keep it short. Here are some examples:
 
         - feat(auth): add user authentication module
