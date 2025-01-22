@@ -61,7 +61,8 @@ def git_commit():
         commit_message = generate_random_commit_message()
     else:
         date = datetime.now().strftime("%Y-%m-%d")
-        commit_message = f"Update number: {date}"
+        current_time = datetime.now().strftime("%H:%M:%S")
+        commit_message = f"Update number: {date} ({current_time})"
     subprocess.run(["git", "commit", "-m", commit_message])
 
 
