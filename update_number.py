@@ -62,7 +62,7 @@ def git_commit():
     else:
         date = datetime.now().strftime("%Y-%m-%d")
         current_time = datetime.now().strftime("%H:%M:%S")
-        commit_message = f"Update number: {date} ({current_time})"
+        commit_message = f"Update number: {date} ({current_time}); {commit_message}"
     subprocess.run(["git", "commit", "-m", commit_message])
 
 
